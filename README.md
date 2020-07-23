@@ -1,4 +1,4 @@
-# FindMyClients
+# ClientFarm
 Python automation programs that help you find clients for your business. 
 ## Why
 - Passive ads aren't enough to reach clients.
