@@ -10,9 +10,16 @@ headers = {
 r = requests.get('https://www.kijiji.ca/b-grand-montreal/creation-de-site-web/k0l80002?sort=relevancyDesc&gpTopAds=y')
 soup = BeautifulSoup(r.content, 'html.parser')
 
+
+item = soup.find_all('div', class_ = 'search-item')
+    title = item.h2.a.text
+    
+
+
 productlist = soup.find_all('div', class_ = 'search-item')
 productlinks = []
 
 for item in productlist:
-    #for link in item.find_all('div', class_='title'):
-    print(productlist)
+    for link in item.find_all('div', class_='title'):
+        print(productlist)
+
